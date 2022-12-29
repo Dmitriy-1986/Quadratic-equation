@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Решение квадратного уравнения:</h2>
+        <p>Квадратное уравнение — ax2 + bx + c = 0, где коэффициенты a, b и c — произвольные числа, причем a ≠ 0.</p>
+        <form action="" id="first_form">
+            <fieldset>
+                <legend>Исходные данные:</legend>
+
+            <div class="box">
+
+                <label>
+                    <input type="number" id="meaning_a" placeholder="A" required>
+                    x <sup>2</sup> + 
+                </label>
+
+                <label>
+                     <input type="number" id="meaning_b" placeholder="B" required>
+                     x + 
+                </label>
+
+                <label>
+                  
+                    <input type="number" id="meaning_c" placeholder="C" required>
+                </label>
+
+            </div>
+
+                <button id="submit" class="btn-submit">
+                    Submit
+                </button>
+
+            </fieldset>
+        </form>
+        <p class="result"></p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
