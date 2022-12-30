@@ -1,9 +1,9 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const meaningA = firstForm.querySelector('#meaning_a'),
-          meaningB = firstForm.querySelector('#meaning_b'),
-          meaningC = firstForm.querySelector('#meaning_c');
+    const meaningA = document.querySelector('#meaning_a'),
+          meaningB = document.querySelector('#meaning_b'),
+          meaningC = document.querySelector('#meaning_c');
 
     let result = document.querySelector('.result'),
         x1, x2, D, a, b, c;
