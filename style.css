@@ -52,3 +52,8 @@ input[type="number"] {
 .error {
     color: red;
 }
+
+.error-message {
+    color: red;
+    text-decoration: underline;
+}
