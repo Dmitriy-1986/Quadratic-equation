@@ -57,3 +57,8 @@ input[type="number"] {
     color: red;
     text-decoration: underline;
 }
+
+.data-quad {
+     color: black;
+     font-weight: 400;
+}
