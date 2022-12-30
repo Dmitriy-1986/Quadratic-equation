@@ -1,8 +1,7 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const firstForm = document.querySelector('#first_form'),
-          meaningA = firstForm.querySelector('#meaning_a'),
+    const meaningA = firstForm.querySelector('#meaning_a'),
           meaningB = firstForm.querySelector('#meaning_b'),
           meaningC = firstForm.querySelector('#meaning_c');
 
@@ -52,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    firstForm.addEventListener('submit', (event) => {
+    document.querySelector('#first_form').addEventListener('submit', (event) => {
         event.preventDefault();
 
         solvingQuadraticEquation();
