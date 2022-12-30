@@ -43,7 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 result.style.color = 'blue';
             }
         } catch (e) {
-            result.innerHTML = `Внимание! В коде JavaScript допущена ошибка: <br> <span class="error">${e}</span>`;
+            result.innerHTML = `Внимание! В коде JavaScript допущена ошибка - <br> 
+                                <span class="error">${e.name}:</span>
+                                <span class="error-message">${e.message}</span>`;
             result.style.cssText = `background: yellow;
                                     color: black;
                                     padding: 5px;`;
