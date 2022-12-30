@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function solvingQuadraticEquation() {
         a = Number(meaningA.value),
-            b = Number(meaningB.value),
-            c = Number(meaningC.value);
+        b = Number(meaningB.value),
+        c = Number(meaningC.value);
 
         try {
             if (a == 0) {
