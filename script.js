@@ -1,12 +1,16 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const meaningA = document.querySelector('#meaning_a'),
-          meaningB = document.querySelector('#meaning_b'),
-          meaningC = document.querySelector('#meaning_c');
+    const firstForm = document.querySelector('#first_form'),
+          meaningA  = document.querySelector('#meaning_a'),
+          meaningB  = document.querySelector('#meaning_b'),
+          meaningC  = document.querySelector('#meaning_c');
 
-    let result = document.querySelector('.result'),
-        x1, x2, D, a, b, c;
+    let result = document.querySelector('.result'), x1, x2, D, a, b, c;
+
+    function styleColor(strColor) {
+        result.style.color = strColor;
+    }
 
     function solvingQuadraticEquation() {
         a = Number(meaningA.value),
@@ -16,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         try {
             if (a == 0) {
                 result.innerHTML = 'Ошибка! Вы ввели недопустимое значение!';
-                result.style.color = 'red';
+                styleColor('red');
                 return false;
             }
 
@@ -25,37 +29,35 @@ window.addEventListener('DOMContentLoaded', () => {
             if (D > 0) {
                 x1 = (-b + Math.sqrt(D)) / (2 * a);
                 x2 = (-b - Math.sqrt(D)) / (2 * a);
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
-                                    Корни уравнения: <span class="data-quad">x1="${x1}" x2="${x2}"</span><br>
-                                    Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
-                result.style.color = 'blue';
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
+                                    Корни уравнения: x1="${x1}" x2="${x2}"<br>
+                                    Дискриминант: (D)="${D}"`;
+                styleColor('blue');
             } else if (D == 0) {
                 x1 = -b / (2 * a);
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
-                                    Корни уравнения: <span class="data-quad">x="${x1}"</span><br>
-                                    Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
-                result.style.color = 'blue';
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
+                                    Корни уравнения: x="${x1}"<br>
+                                    Дискриминант: (D)="${D}"`;
+                styleColor('blue');
             } else if (D < 0) {
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
                                     Корней нет!<br>
-                                    Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
-                result.style.color = 'blue';
-            }
+                                    Дискриминант: (D)="${D}"`;
+                styleColor('blue');
+            };
         } catch (e) {
-            result.innerHTML = `Внимание! В коде JavaScript допущена ошибка - <br> 
+            result.innerHTML = `Внимание! В коде JavaScript допущена ошибка<br> 
                                 <span class="error">${e.name}:</span>
                                 <span class="error-message">${e.message}</span>`;
-            result.style.cssText = `background: yellow;
-                                    color: black;
-                                    padding: 5px;`;
-        }
+            styleColor('black');
+        };
     };
 
-    document.querySelector('#first_form').addEventListener('submit', (event) => {
+    firstForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         solvingQuadraticEquation();
 
-        document.querySelector('#first_form').reset();
+        firstForm.reset();
     });
 });
