@@ -26,18 +26,18 @@ window.addEventListener('DOMContentLoaded', () => {
             if (D > 0) {
                 x1 = (-b + Math.sqrt(D)) / (2 * a);
                 x2 = (-b - Math.sqrt(D)) / (2 * a);
-                result.innerHTML = `Коэффициенты: a ="${a}", b="${b}", c="${c}"<br>
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
                                     Корни уравнения: x1="${x1}" x2="${x2}"<br>
                                     Дискриминант (D)="${D}"`;
                 result.style.color = 'blue';
             } else if (D == 0) {
                 x1 = -b / (2 * a);
-                result.innerHTML = `Коэффициенты: a ="${a}", b="${b}", c="${c}"<br>
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
                                     Корни уравнения: x="${x1}"<br>
                                     Дискриминант (D)="${D}"`;
                 result.style.color = 'blue';
             } else if (D < 0) {
-                result.innerHTML = `Коэффициенты: a ="${a}", b="${b}", c="${c}"<br>
+                result.innerHTML = `Коэффициенты: a="${a}", b="${b}", c="${c}"<br>
                                     Корней нет!<br>
                                     Дискриминант (D)="${D}"`;
                 result.style.color = 'blue';
