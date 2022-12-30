@@ -56,6 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         solvingQuadraticEquation();
 
-        firstForm.reset();
+        document.querySelector('#first_form').reset();
     });
 });
