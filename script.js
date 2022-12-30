@@ -2,9 +2,9 @@
 
 window.addEventListener('DOMContentLoaded', () => {
     const firstForm = document.querySelector('#first_form'),
-        meaningA = firstForm.querySelector('#meaning_a'),
-        meaningB = firstForm.querySelector('#meaning_b'),
-        meaningC = firstForm.querySelector('#meaning_c');
+          meaningA = firstForm.querySelector('#meaning_a'),
+          meaningB = firstForm.querySelector('#meaning_b'),
+          meaningC = firstForm.querySelector('#meaning_c');
 
     let result = document.querySelector('.result'),
         x1, x2, D, a, b, c;
@@ -26,18 +26,18 @@ window.addEventListener('DOMContentLoaded', () => {
             if (D > 0) {
                 x1 = (-b + Math.sqrt(D)) / (2 * a);
                 x2 = (-b - Math.sqrt(D)) / (2 * a);
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a ="${a}", b="${b}", c="${c}"</span><br>
+                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
                                     Корни уравнения: <span class="data-quad">x1="${x1}" x2="${x2}"</span><br>
                                     Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
                 result.style.color = 'blue';
             } else if (D == 0) {
                 x1 = -b / (2 * a);
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a ="${a}", b="${b}", c="${c}"</span><br>
+                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
                                     Корни уравнения: <span class="data-quad">x="${x1}"</span><br>
                                     Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
                 result.style.color = 'blue';
             } else if (D < 0) {
-                result.innerHTML = `Коэффициенты: <span class="data-quad">a ="${a}", b="${b}", c="${c}"</span><br>
+                result.innerHTML = `Коэффициенты: <span class="data-quad">a="${a}", b="${b}", c="${c}"</span><br>
                                     Корней нет!<br>
                                     Дискриминант: <span class="data-quad">(D)="${D}"</span>`;
                 result.style.color = 'blue';
